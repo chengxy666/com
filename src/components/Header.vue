@@ -13,6 +13,7 @@
             class="el-menu-demo"
             mode="horizontal"
             @select="handleSelect"
+            active-text-color="#B9984D"
           >
             <el-menu-item index="1">首页</el-menu-item>
             <el-menu-item index="2">品牌介绍</el-menu-item>
@@ -52,7 +53,7 @@
     </el-row>
   </header>
 </template>
-<style lang='scss'>
+<style lang='scss' scoped>
 header {
   width: 1200px;
   margin: 0 auto;

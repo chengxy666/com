@@ -16,7 +16,7 @@
     </div>
   </footer>
 </template>
-<style scoped lang='scss'>
+<style scoped lang='scss' >
 footer {
   margin: 0 auto;
   width: 1200px;
@@ -28,19 +28,19 @@ footer {
     display: flex;
     font-size: 14px;
     color: #666;
-    &::after,&::before{
-         content: "";
-        display: table;
-    }
-    &::after{
-        clear: both;
-    }
+  //   &::after,&::before{
+  //        content: "";
+  //       display: table;
+  //   }
+  //   &::after{
+  //       clear: both;
+  //   }
   }
   .check{
         // margin: 10px 0;
     font-size: 12px;
     color: #666;
-    //   clear: both;
+      clear: both;
       text-align: center; 
   }
 }
