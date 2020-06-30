@@ -1,5 +1,6 @@
 <template>
   <footer>
+    <div class="main">
     <div class="us">
       <div class="left">
         <p>电话：021-55225280</p>
@@ -13,11 +14,13 @@
     <div class="check">
         <p>©2019 上海途健体育发展有限公司 版权所有</p>
         <p>技术支持：×××</p>
-    </div>
+    </div></div>
   </footer>
 </template>
 <style scoped lang='scss' >
-footer {
+footer{
+  background: #eee;
+.main {
   margin: 0 auto;
   width: 1200px;
   .us {
@@ -28,13 +31,6 @@ footer {
     display: flex;
     font-size: 14px;
     color: #666;
-  //   &::after,&::before{
-  //        content: "";
-  //       display: table;
-  //   }
-  //   &::after{
-  //       clear: both;
-  //   }
   }
   .check{
         // margin: 10px 0;
@@ -43,5 +39,5 @@ footer {
       clear: both;
       text-align: center; 
   }
-}
+}}
 </style>

@@ -9,10 +9,11 @@
       <el-col :span="14">
         <div class="grid-content">
           <el-menu
-            :default-active="activeIndex"
+            :default-active="this.$route.path"
             class="el-menu-demo"
             mode="horizontal"
             @select="handleSelect"
+            router
             active-text-color="#B9984D"
           >
             <el-menu-item index="1">首页</el-menu-item>
@@ -39,7 +40,7 @@
               <el-menu-item index="5-1">公司新闻</el-menu-item>
               <el-menu-item index="3-2">行业资讯</el-menu-item>
             </el-submenu>
-            <el-menu-item index="3">联系我们</el-menu-item>
+            <el-menu-item index="6">联系我们</el-menu-item>
           </el-menu>
         </div>
       </el-col>
@@ -70,7 +71,14 @@ export default {
   data() {
     return {
       activeIndex: "1",
-      activeIndex2: "1",
+      pathList:[
+        {name:'/',navitem:'首页'},
+        {name:'/brand',navitem:'品牌介绍'},
+        {name:'/case',navitem:'产品中心'},
+        {name:'/',navitem:'项目案例'},
+        {name:'/',navitem:'新闻资讯'},
+        {name:'/about',navitem:'联系我们'}
+      ],
       kwd:''
     };
   },

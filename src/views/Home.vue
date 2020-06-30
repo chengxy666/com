@@ -70,9 +70,25 @@
         <p class="entitle">NEWS</p>
       </div>
       <div class="news-item">
-        <div class="item">
-          <el-card shadow="hover">鼠标悬浮时显示</el-card>
-        </div>
+          <div class="item" v-for="(item,index) of news" :key="index">
+        <el-card shadow="hover" >
+            <el-row>
+              <el-col :span="6">
+                <div>
+                  <img class="img" :src="item.img" alt />
+                </div>
+              </el-col>
+              <el-col :span="16">
+                <div class="detail">
+                  <p class="Title">{{item.title}}</p>
+                  <p class="subtitle">{{item.subtitle}}</p>
+                  <el-tag type="info" class="tips">{{item.tips}}</el-tag>
+                </div>
+              </el-col>
+              <el-col :span="2">{{item.date}}</el-col>
+            </el-row>
+        </el-card>
+          </div>
       </div>
     </div>
   </div>
@@ -137,6 +153,30 @@ export default {
           img:
             "http://20262608.s21i.faiusr.com/2/ABUIABACGAAg3cqH7AUoyK6xswUwoAY4oAY.jpg",
           title: "SF6103模块化绳动训练器"
+        }
+      ],
+      news: [
+        {
+          nid: 1,
+          img:
+            "http://20262608.s21i.faiusr.com/2/ABUIABACGAAgn-y_7QUouJOWzgcwuAg4qgY!700x700.jpg",
+          title:
+            "大集结，齐分享，共学习，再亮剑！途健第三期健客训练营圆满成功！",
+          subtitle:
+            "为期两天的健客训练营培训就这样圆满成功。相信大家一定收获满满。“宝剑出鞘，锋芒毕露，健客结义，仗走天涯”。让我们一起亮剑吧！",
+          date: "2019-10-23",
+          tips: "公司新闻"
+        },
+        {
+          nid: 1,
+          img:
+            "http://20262608.s21i.faiusr.com/2/ABUIABACGAAgn-y_7QUouJOWzgcwuAg4qgY!700x700.jpg",
+          title:
+            "大集结，齐分享，共学习，再亮剑！途健第三期健客训练营圆满成功！",
+          subtitle:
+            "为期两天的健客训练营培训就这样圆满成功。相信大家一定收获满满。“宝剑出鞘，锋芒毕露，健客结义，仗走天涯”。让我们一起亮剑吧！",
+          date: "2019-10-23",
+          tips: "公司新闻"
         }
       ]
     };
@@ -222,10 +262,10 @@ export default {
   .goods {
     height: 380px;
     .img {
-        height: 275px;
-        width: 275px;
+      height: 275px;
+      width: 275px;
       img {
-        width:100%;
+        width: 100%;
         height: 100%;
         overflow: hidden;
       }
@@ -264,9 +304,10 @@ export default {
   }
 }
 .news {
-  height: 1200px;
-  margin: 0 auto;
+  // height: 1000px;
   width: 1200px;
+  margin: 0 auto;
+  cursor: pointer;
   .title {
     padding-top: 65px;
     text-align: center;
@@ -280,8 +321,29 @@ export default {
       line-height: 28px;
     }
   }
-  .news-item{
-    margin-top: 20px;
+  .news-item {
+   padding-top: 20px;
+    .item{
+      margin-bottom : 10px;
+      height: 200px;
+      .img {
+      width: 220px;
+      height: 130px;
+    }
+    .detail {
+      font-size: 12px;
+      .Title {
+        font-size: 16px;
+        padding: 15px 0;
+        &:hover{
+          color:#b9984d
+        }
+      }
+      .subtitle{
+        padding: 15px 0;
+      }
+    }
+    }
   }
 }
 </style>

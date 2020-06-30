@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Brand from '../views/Brand.vue'
+import Case from '../views/Case.vue'
+import About from '../views/About.vue'
 
 Vue.use(VueRouter)
 
@@ -10,6 +13,21 @@ Vue.use(VueRouter)
     name: 'Home',
     component: Home
   },
+  {
+    path: '/brand',
+    name: 'Brand',
+    component: Brand
+  },
+  {
+    path: '/case',
+    name: 'Case',
+    component: Case
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About
+  }
   // {
   //   path: '/about',
   //   name: 'About',
