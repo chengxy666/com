@@ -2,7 +2,7 @@
   <div class="main">
     <!-- 轮播图 -->
     <el-carousel :interval="5000" arrow="always" height="680px">
-      <el-carousel-item v-for="(item,index) in banners" :key="index">
+      <el-carousel-item v-for="(item,index) in data.banners" :key="index">
         <img :src="item" alt />
       </el-carousel-item>
     </el-carousel>
@@ -14,7 +14,7 @@
       </div>
       <div class="detail">
         <el-row :gutter="20">
-          <el-col :span="6" v-for="(item,index) in brand" :key="index">
+          <el-col :span="6" v-for="(item,index) in data.brand" :key="index">
             <div class="grid-content bg-purple content">
               <div class="img">
                 <img :src="item.icon" alt />
@@ -42,7 +42,7 @@
       </div>
       <div class="goods">
         <el-row :gutter="20">
-          <el-col :span="6" v-for="(item,index) in goods" :key="index">
+          <el-col :span="6" v-for="(item,index) in data.goods" :key="index">
             <div class="grid-content bg-purple">
               <div class="img">
                 <img :src="item.img" alt />
@@ -70,7 +70,7 @@
         <p class="entitle">NEWS</p>
       </div>
       <div class="news-item">
-          <div class="item" v-for="(item,index) of news" :key="index">
+          <div class="item" v-for="(item,index) of data.news" :key="index">
         <el-card shadow="hover" >
             <el-row>
               <el-col :span="6">
@@ -97,6 +97,7 @@
 export default {
   data() {
     return {
+      data:{
       banners: [
         "http://20262608.s21i.faiusr.com/2/ABUIABACGAAg8JCC7wUo1uep4wYwgA84oAY.jpg",
         "http://20262608.s21i.faiusr.com/2/ABUIABACGAAg8JCC7wUozqGTyAEwgA843AY.jpg",
@@ -179,7 +180,8 @@ export default {
           tips: "公司新闻"
         }
       ]
-    };
+    }
+    }
   },
   mounted() {
     console.log(this.goods);

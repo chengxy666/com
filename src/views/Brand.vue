@@ -82,6 +82,26 @@ export default {
                 hid:1,
                 img:'http://20262608.s21i.faiusr.com/2/ABUIABACGAAg25P17AUoz_-k9wQwhhQ4uQ8.jpg',
                 title:'SevenFiter荣获精益创新十佳品牌'
+            },
+                {
+                hid:1,
+                img:'http://20262608.s21i.faiusr.com/2/ABUIABACGAAg25P17AUoz_-k9wQwhhQ4uQ8.jpg',
+                title:'SevenFiter荣获精益创新十佳品牌'
+            },
+                {
+                hid:1,
+                img:'http://20262608.s21i.faiusr.com/2/ABUIABACGAAg25P17AUoz_-k9wQwhhQ4uQ8.jpg',
+                title:'SevenFiter荣获精益创新十佳品牌'
+            },
+                {
+                hid:1,
+                img:'http://20262608.s21i.faiusr.com/2/ABUIABACGAAg25P17AUoz_-k9wQwhhQ4uQ8.jpg',
+                title:'SevenFiter荣获精益创新十佳品牌'
+            },
+                {
+                hid:1,
+                img:'http://20262608.s21i.faiusr.com/2/ABUIABACGAAg25P17AUoz_-k9wQwhhQ4uQ8.jpg',
+                title:'SevenFiter荣获精益创新十佳品牌'
             }
             ]
         }

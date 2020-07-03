@@ -4,6 +4,8 @@ import Home from '../views/Home.vue'
 import Brand from '../views/Brand.vue'
 import Case from '../views/Case.vue'
 import About from '../views/About.vue'
+import Product from '../views/Product.vue'
+import Not from '../views/404.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +29,15 @@ Vue.use(VueRouter)
     path: '/about',
     name: 'About',
     component: About
+  },
+  {
+    path: '/product',
+    name: 'Product',
+    component: Product
+  },
+  {
+    path: '/*',
+    component: Not
   }
   // {
   //   path: '/about',

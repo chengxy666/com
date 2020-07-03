@@ -16,31 +16,16 @@
             router
             active-text-color="#B9984D"
           >
-            <el-menu-item index="1">首页</el-menu-item>
-            <el-menu-item index="2">品牌介绍</el-menu-item>
-            <el-submenu index="3">
-              <template slot="title">产品中心</template>
-              <el-menu-item index="3-1">跑步机</el-menu-item>
-              <el-menu-item index="3-2">其他有氧</el-menu-item>
-              <el-menu-item index="3-3">双功能力量</el-menu-item>
-              <el-menu-item index="3-4">单功能力量</el-menu-item>
-              <el-menu-item index="3-5">自由力量</el-menu-item>
-              <el-menu-item index="3-6">挂片式力量</el-menu-item>
-              <el-menu-item index="3-7">个性化系列</el-menu-item>
-            </el-submenu>
-            <el-submenu index="4">
-              <template slot="title">项目案例</template>
-              <el-menu-item index="4-1">企业事业单位</el-menu-item>
-              <el-menu-item index="4-2">健身中心俱乐部</el-menu-item>
-              <el-menu-item index="4-3">酒店水疗中心</el-menu-item>
-              <el-menu-item index="4-4">房产社区</el-menu-item>
-            </el-submenu>
+            <el-menu-item index="/">首页</el-menu-item>
+            <el-menu-item index="/brand">品牌介绍</el-menu-item>
+            <el-menu-item index="/product">产品中心</el-menu-item>
+            <el-menu-item index="/case">项目案例</el-menu-item>
             <el-submenu index="5">
               <template slot="title">新闻资讯</template>
               <el-menu-item index="5-1">公司新闻</el-menu-item>
               <el-menu-item index="3-2">行业资讯</el-menu-item>
             </el-submenu>
-            <el-menu-item index="6">联系我们</el-menu-item>
+            <el-menu-item index="/about">联系我们</el-menu-item>
           </el-menu>
         </div>
       </el-col>
@@ -61,7 +46,7 @@ header {
   .el-menu.el-menu--horizontal {
     border-bottom-style: none;
   }
-  .search{
+  .search {
     margin-top: 10px;
   }
 }
@@ -70,16 +55,8 @@ header {
 export default {
   data() {
     return {
-      activeIndex: "1",
-      pathList:[
-        {name:'/',navitem:'首页'},
-        {name:'/brand',navitem:'品牌介绍'},
-        {name:'/case',navitem:'产品中心'},
-        {name:'/',navitem:'项目案例'},
-        {name:'/',navitem:'新闻资讯'},
-        {name:'/about',navitem:'联系我们'}
-      ],
-      kwd:''
+      activeIndex: "/",
+      kwd: ""
     };
   },
   methods: {
